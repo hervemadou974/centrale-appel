@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Appel{% endblock %}
+
+{% block body %}
+    <h1>Nouvelle Appel</h1>
+    {{ include('centrale/_form.html.twig') }}
+<center>
+    <a href="{{ path('app_centrale_index') }}"class="btn btn-primary">Retour à la liste</a>
+<center/>
+{% endblock %}

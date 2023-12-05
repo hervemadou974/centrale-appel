@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Paramètres{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Ajoutez ici des styles CSS pour personnaliser la mise en forme */
+        .container {
+            margin-top: 20px;
+        }
+        .nav-item {
+            margin-bottom: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container text-center"> {# Utilisez la classe "text-center" pour centrer le contenu #}
+    <h1>Paramètres de l'application</h1>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary" href="{{ path('app_commune_index') }}">Base de données Communes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary" href="{{ path('app_services_index') }}">Base de données Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-primary" href="{{ path('app_utilisateur_index') }}">Base de données Utilisateurs</a>
+        </li>
+        <!-- Ajoutez d'autres liens vers vos paramètres ici si nécessaire -->
+    </ul>
+</div>
+{% endblock %}

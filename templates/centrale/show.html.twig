@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Centrale{% endblock %}
+
+{% block body %}
+    <h1>Centrale</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ centrale.id }}</td>
+            </tr>
+            <tr>
+                <th>Date heure</th>
+                <td>{{ centrale.dateHeure ? centrale.dateHeure|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+            <th>Opérateur</th>
+            <td>{{ centrale.agent }}</td>
+            </tr>
+            <tr>
+                <th>Administre appellant</th>
+                <td>{{ centrale.administreAppellant }}</td>
+            </tr>
+            <tr>
+                <th>Prenom administre</th>
+                <td>{{ centrale.prenomAdministre }}</td>
+            </tr>
+            <tr>
+                <th>Objet</th>
+                <td>{{ centrale.objet }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ centrale.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>{{ centrale.mail }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ centrale.status ? 'Traité' : 'En cours de traitement' }}</td>
+            </tr>
+        </tbody>
+    </table>
+<center>
+    <a href="{{ path('app_centrale_index') }}"class="btn btn-primary d-flex justify-content-center align-items-center" style="width: 300px;">Retour en liste</a>
+<center/>
+    <a href="{{ path('app_centrale_edit', {'id': centrale.id}) }}"class="btn btn-primary d-flex justify-content-center align-items-center" style="width: 300px;">Modifier</a>
+
+    {{ include('centrale/_delete_form.html.twig') }}
+{% endblock %}

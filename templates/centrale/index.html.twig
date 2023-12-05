@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Centrale index{% endblock %}
+
+{% block body %}
+<center>
+    <h1>Centrale index</h1>
+<center/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date et Heure</th>
+                <th>Opérateur</th>
+                <th>Nom Administré</th>
+                <th>Prénom Administré</th>
+                <th>Objet de l'appel</th>
+                <th>Commune</th>
+                <th>Numéro de téléphone</th>
+                <th>Adresse e-mail</th>
+                <th>Destinataire</th>
+                <th>Statut de la requête</th>
+                <th>Modifier</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for centrale in centrales %}
+            <tr>
+<<<<<<< HEAD
+                <td>{{ centrale.id }}</td>
+                <td>{{ centrale.dateHeure ? centrale.dateHeure|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ centrale.agent }}</td>
+                <td>{{ centrale.administreAppellant }}</td>
+                <td>{{ centrale.prenomAdministre }}</td>
+                <td>{{ centrale.objet }}</td>
+                <td>{{ centrale.commune }}</td>
+                <td>{{ centrale.telephone }}</td>
+                <td>{{ centrale.mail }}</td>
+                <td>{{ centrale.agent }}</td>
+                <td>{{ centrale.status ? 'Traité' : 'En cours de traitement' }}</td>
+                <td>
+                    <a href="{{ path('app_centrale_show', {'id': centrale.id}) }}"class="btn btn-primary">Visionner</a>
+                    <a href="{{ path('app_centrale_edit', {'id': centrale.id}) }}"class="btn btn-primary">Modifier</a>
+=======
+                <td class="text-center">{{ centrale.id }}</td>
+                <td class="text-center">{{ centrale.dateHeure ? centrale.dateHeure|date('d-m-y- h-i-s') : '' }}</td>
+                <td class="text-center">{{ centrale.agent.username }}</td>
+                <td class="text-center">{{ centrale.administreAppellant }}</td>
+                <td class="text-center">{{ centrale.prenomAdministre }}</td>
+                <td class="text-center">{{ centrale.objet }}</td>
+                <td class="text-center">{{ centrale.commune }}</td>
+                <td class="text-center">{{ centrale.telephone }}</td>
+                <td class="text-center">{{ centrale.mail }}</td>
+                <td class="text-center">{{ centrale.destinataire  }}</td>
+                <td class="text-center">{{ centrale.status ? 'Traité' : 'En cours de traitement' }}</td>
+                <td class="text-center">
+                    <a href="{{ path('app_centrale_show', {'id': centrale.id}) }}">Visionner</a>
+                    <a href="{{ path('app_centrale_edit', {'id': centrale.id}) }}">Modifier</a>
+>>>>>>> 7b3ce8316677c0b100ee1d65159ffc833ad907b5
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Pas d'enregistrement fait</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_centrale_new') }}"class="btn btn-primary">Nouveau</a>
+    <div id="myChartContainer">
+    <canvas id="myChart"></canvas>
+</div>
+{% endblock %}

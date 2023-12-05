@@ -1,0 +1,75 @@
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour le corps */
+body {
+    font-family: 'Oswald'; /* Nom de la police */
+    src: url('../fonts/Oswald-Regular.ttf') format('truetype'); /* Chemin vers le fichier TTF */
+    font-weight: normal;
+    font-style: normal;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #007BFF;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.navbar-toggler-icon {
+    background-color: #FFFFFF;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #FFFFFF;
+}
+
+/* Styles pour les cartes */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 28px;
+    color: #007BFF;
+}
+
+
+/* Styles pour les boutons */
+.btn-primary {
+    background-color: #19414E;
+    border-color: #007BFF;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Styles pour les liens */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des utilisateurs{% endblock %}
+
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<center>
+    <h1>Liste des utilisateurs</h1>
+<center/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Rôles</th>
+                <th>Mot de passe</th>
+                <th>Services</th>
+                <th>Fonction</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for utilisateur in utilisateurs %}
+                <tr>
+                    <td>{{ utilisateur.id }}</td>
+                    <td>{{ utilisateur.username }}</td>
+                    <td>
+                        {% for role in utilisateur.roles %}
+                            {% if role == "ROLE_USER" %}
+                                Utilisateur
+                            {% elseif role == "ROLE_ADMIN" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>{{ utilisateur.password }}</td>
+                    <td>{{ utilisateur.Services }}</td>
+                    <td>{{ utilisateur.fonction ? 'Directeur' : 'Agent' }}</td>
+                    <td>
+                        <a href="{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}" class="btn btn-primary">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">Il n'y a pas d'utilisateurs</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ path('app_parametre') }}"class="btn btn-primary">Retour</a>
+</div>
+{% endblock %}

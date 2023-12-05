@@ -1,0 +1,124 @@
+/* modern-style.css */
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Oswald'; /* Nom de la police */
+    src: url('../fonts/Oswald-Regular.ttf') format('truetype'); /* Chemin vers le fichier TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    color: #FFFFFF;
+    border: none;
+    background: #4e73df;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #19414E;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #19414E;
+}
+
+.form-check-label {
+    font-weight: normal;
+    color: #FFFFFF;
+
+}
+
+/* Styles pour les boutons */
+.btn-primary {
+    background-color: #334a90;
+    border-color: rgb(4, 232, 240);
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #334a90;
+    border-color: rgb(4, 232, 240);
+}
+.btn-primary:hover {
+    background-color: #4e73df;
+}
+
+.mt-3 {
+    margin-top: 20px;
+}
+
+.text-center {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    background: #4e73df;
+    overflow: hidden; /* Cache tout ce qui dépasse de la barre de navigation */
+}
+
+/* Style des liens dans la navbar */
+.navbar a {
+    float: left; /* Alignement horizontal à gauche */
+    display: block; /* Assure que les liens occupent toute la largeur de la navbar */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centre le texte horizontalement */
+    padding: 14px 16px; /* Espacement autour du texte */
+    text-decoration: none; /* Supprime la soulignement des liens */
+}
+
+/* Style des liens au survol */
+.navbar a:hover {
+    background-color: #4e73df; /* Couleur de fond de la navbar */
+    color: black; /* Couleur du texte au survol */
+}
+
+.navbar a {
+    font-family: 'Koulen', sans-serif;
+    color: #ddd; /* Couleur du texte */
+    font-size: 24px; /* Taille de la police en pixels */
+    text-decoration: none; /* Supprime la soulignement des liens */
+    padding: 14px 16px; /* Espacement autour du texte */
+}
+
+.style_custom a {
+    font-family: 'Koulen', sans-serif;
+        color: #ddd; /* Couleur du texte */
+    font-size: 24px; /* Taille de la police en pixels */
+    text-decoration: none; /* Supprime la soulignement des liens */
+    padding: 14px 16px; /* Espacement autour du texte */
+}
+ 
