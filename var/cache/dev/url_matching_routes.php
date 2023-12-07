@@ -46,28 +46,26 @@ return [
                     .')'
                 .')'
                 .'|/c(?'
-                    .'|entrale/(?'
-                        .'|([^/]++)(?'
-                            .'|(*:196)'
-                            .'|/edit(*:209)'
-                        .')'
-                        .'|delete/([^/]++)(*:233)'
+                    .'|entrale/([^/]++)(?'
+                        .'|(*:193)'
+                        .'|/edit(*:206)'
+                        .'|(*:214)'
                     .')'
                     .'|ommune/([^/]++)(?'
-                        .'|(*:260)'
-                        .'|/edit(*:273)'
-                        .'|(*:281)'
+                        .'|(*:241)'
+                        .'|/edit(*:254)'
+                        .'|(*:262)'
                     .')'
                 .')'
                 .'|/services/([^/]++)(?'
-                    .'|(*:312)'
-                    .'|/edit(*:325)'
-                    .'|(*:333)'
+                    .'|(*:293)'
+                    .'|/edit(*:306)'
+                    .'|(*:314)'
                 .')'
                 .'|/utilisateur/([^/]++)(?'
-                    .'|(*:366)'
-                    .'|/edit(*:379)'
-                    .'|(*:387)'
+                    .'|(*:347)'
+                    .'|/edit(*:360)'
+                    .'|(*:368)'
                 .')'
             .')/?$}sDu',
     ],
@@ -79,18 +77,18 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        196 => [[['_route' => 'app_centrale_show', '_controller' => 'App\\Controller\\CentraleController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        209 => [[['_route' => 'app_centrale_edit', '_controller' => 'App\\Controller\\CentraleController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        233 => [[['_route' => 'app_centrale_delete', '_controller' => 'App\\Controller\\CentraleController::delete'], ['id'], null, null, false, true, null]],
-        260 => [[['_route' => 'app_commune_show', '_controller' => 'App\\Controller\\CommuneController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        273 => [[['_route' => 'app_commune_edit', '_controller' => 'App\\Controller\\CommuneController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        281 => [[['_route' => 'app_commune_delete', '_controller' => 'App\\Controller\\CommuneController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        312 => [[['_route' => 'app_services_show', '_controller' => 'App\\Controller\\ServicesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        325 => [[['_route' => 'app_services_edit', '_controller' => 'App\\Controller\\ServicesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        333 => [[['_route' => 'app_services_delete', '_controller' => 'App\\Controller\\ServicesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        366 => [[['_route' => 'app_utilisateur_show', '_controller' => 'App\\Controller\\UtilisateurController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        379 => [[['_route' => 'app_utilisateur_edit', '_controller' => 'App\\Controller\\UtilisateurController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        387 => [
+        193 => [[['_route' => 'app_centrale_show', '_controller' => 'App\\Controller\\CentraleController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        206 => [[['_route' => 'app_centrale_edit', '_controller' => 'App\\Controller\\CentraleController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        214 => [[['_route' => 'app_centrale_delete', '_controller' => 'App\\Controller\\CentraleController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        241 => [[['_route' => 'app_commune_show', '_controller' => 'App\\Controller\\CommuneController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        254 => [[['_route' => 'app_commune_edit', '_controller' => 'App\\Controller\\CommuneController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        262 => [[['_route' => 'app_commune_delete', '_controller' => 'App\\Controller\\CommuneController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        293 => [[['_route' => 'app_services_show', '_controller' => 'App\\Controller\\ServicesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        306 => [[['_route' => 'app_services_edit', '_controller' => 'App\\Controller\\ServicesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        314 => [[['_route' => 'app_services_delete', '_controller' => 'App\\Controller\\ServicesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        347 => [[['_route' => 'app_utilisateur_show', '_controller' => 'App\\Controller\\UtilisateurController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        360 => [[['_route' => 'app_utilisateur_edit', '_controller' => 'App\\Controller\\UtilisateurController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        368 => [
             [['_route' => 'app_utilisateur_delete', '_controller' => 'App\\Controller\\UtilisateurController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

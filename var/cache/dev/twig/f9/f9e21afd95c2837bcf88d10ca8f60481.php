@@ -511,6 +511,6 @@ class __TwigTemplate_ac15c6c4ad3c2c23ac89e6819920865f extends Template
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/centrale/centrale/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/Central-d-appel/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

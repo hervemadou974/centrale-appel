@@ -20,6 +20,7 @@ return [
     'app_centrale_new' => [[], ['_controller' => 'App\\Controller\\CentraleController::new'], [], [['text', '/centrale/new']], [], [], []],
     'app_centrale_show' => [['id'], ['_controller' => 'App\\Controller\\CentraleController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/centrale']], [], [], []],
     'app_centrale_edit' => [['id'], ['_controller' => 'App\\Controller\\CentraleController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/centrale']], [], [], []],
+    'app_centrale_delete' => [['id'], ['_controller' => 'App\\Controller\\CentraleController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/centrale']], [], [], []],
     'app_commune_index' => [[], ['_controller' => 'App\\Controller\\CommuneController::index'], [], [['text', '/commune/']], [], [], []],
     'app_commune_new' => [[], ['_controller' => 'App\\Controller\\CommuneController::new'], [], [['text', '/commune/new']], [], [], []],
     'app_commune_show' => [['id'], ['_controller' => 'App\\Controller\\CommuneController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/commune']], [], [], []],
@@ -40,5 +41,4 @@ return [
     'app_utilisateur_show' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/utilisateur']], [], [], []],
     'app_utilisateur_edit' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/utilisateur']], [], [], []],
     'app_utilisateur_delete' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/utilisateur']], [], [], []],
-    'app_centrale_delete' => [['id'], ['_controller' => 'App\\Controller\\CentraleController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/centrale/delete']], [], [], []],
 ];

@@ -3,23 +3,24 @@
 {% block title %}Liste des utilisateurs{% endblock %}
 
 {% block stylesheets %}
-    <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Koulen&display=swap">
+
+<link rel="stylesheet" href="{{ asset('css/modern-style.css') }}">
 {% endblock %}
 
 {% block body %}
 <center>
     <h1>Liste des utilisateurs</h1>
-<center/>
+  </center>
     <table class="table">
-        <thead>
+        <thead> 
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Rôles</th>
                 <th>Mot de passe</th>
                 <th>Services</th>
-                <th>Fonction</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -39,7 +40,6 @@
                     </td>
                     <td>{{ utilisateur.password }}</td>
                     <td>{{ utilisateur.Services }}</td>
-                    <td>{{ utilisateur.fonction ? 'Directeur' : 'Agent' }}</td>
                     <td>
                         <a href="{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}" class="btn btn-primary">Modifier</a>
                     </td>

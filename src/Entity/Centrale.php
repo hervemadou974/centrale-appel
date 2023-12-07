@@ -30,19 +30,13 @@ class Centrale
     private ?string $objet = null;
 
     #[ORM\Column]
-    private ?float $telephone = null;
+    private ?int $telephone = null;
 
     #[ORM\Column(length: 155, nullable: true)]
     private ?string $mail = null;
 
     #[ORM\Column]
     private ?bool $status = null;
-
-    #[ORM\ManyToOne(inversedBy: 'centrales')]
-    private ?Commune $commune = null;
-
-    #[ORM\ManyToOne(inversedBy: 'destinataire')]
-    private ?Utilisateur $destinataire = null;
 
     public function getId(): ?int
     {
@@ -141,30 +135,6 @@ class Centrale
     public function setStatus(bool $status): static
     {
         $this->status = $status;
-
-        return $this;
-    }
-
-    public function getCommune(): ?Commune
-    {
-        return $this->commune;
-    }
-
-    public function setCommune(?Commune $commune): static
-    {
-        $this->commune = $commune;
-
-        return $this;
-    }
-
-    public function getDestinataire(): ?Utilisateur
-    {
-        return $this->destinataire;
-    }
-
-    public function setDestinataire(?Utilisateur $destinataire): static
-    {
-        $this->destinataire = $destinataire;
 
         return $this;
     }

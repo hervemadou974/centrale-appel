@@ -48,18 +48,18 @@
                                     }
                                 }) }}
                             </div>
-
+                            
                             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
+                            
                             <div class="d-flex justify-content-center">
                                 <button class="btn btn-primary" type="submit">S'inscrire</button>
                             </div>
+                            {{ form_end(registrationForm) }}  
+                            <p class="mt-3 text-center"><a href="{{ path('app_login') }}" class="btn btn-primary">Retour</a></p>
 
-                            {{ form_end(registrationForm) }}
                         </form>
                     </div>
                 </div>
-                <p class="mt-3 text-center"><a href="{{ path('app_login') }}" class="btn btn-primary">Retour</a></p>
             </div>
         </div>
     </div>

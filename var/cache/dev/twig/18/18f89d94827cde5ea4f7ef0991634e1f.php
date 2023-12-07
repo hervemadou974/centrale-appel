@@ -75,16 +75,16 @@ class __TwigTemplate_3cef8b7cc1016d2ae9c30bff53b6e7ed extends Template
 </head>
 <body>
     <nav>
-        <div class=\"navbar\">
-            <a href=\"";
-        // line 19
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
-        echo "\">CIREST</a>
-            ";
-        // line 20
+        ";
+        // line 18
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 21
-            echo "            <nav class=\"navbar navbar-expand-lg navbar-dark\" style=\"height: 50px;\">
+            // line 19
+            echo "        <div class=\"navbar\">
+            <a href=\"";
+            // line 20
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+            echo "\">CIREST</a>
+            <nav class=\"navbar navbar-expand-lg navbar-dark\" style=\"height: 50px;\">
                 <div class=\"container\">
                     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
@@ -236,7 +236,7 @@ class __TwigTemplate_3cef8b7cc1016d2ae9c30bff53b6e7ed extends Template
 
     public function getDebugInfo()
     {
-        return array (  210 => 50,  192 => 47,  173 => 8,  153 => 4,  141 => 51,  138 => 50,  135 => 49,  132 => 48,  130 => 47,  125 => 44,  115 => 37,  111 => 35,  105 => 33,  103 => 32,  98 => 30,  87 => 21,  85 => 20,  81 => 19,  73 => 14,  67 => 11,  63 => 10,  58 => 8,  54 => 6,  52 => 4,  47 => 1,);
+        return array (  210 => 50,  192 => 47,  173 => 8,  153 => 4,  141 => 51,  138 => 50,  135 => 49,  132 => 48,  130 => 47,  125 => 44,  115 => 37,  111 => 35,  105 => 33,  103 => 32,  98 => 30,  85 => 20,  82 => 19,  80 => 18,  73 => 14,  67 => 11,  63 => 10,  58 => 8,  54 => 6,  52 => 4,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -258,9 +258,9 @@ class __TwigTemplate_3cef8b7cc1016d2ae9c30bff53b6e7ed extends Template
 </head>
 <body>
     <nav>
+        {% if is_granted('ROLE_USER') %}
         <div class=\"navbar\">
             <a href=\"{{ path('app_home') }}\">CIREST</a>
-            {% if is_granted('ROLE_USER') %}
             <nav class=\"navbar navbar-expand-lg navbar-dark\" style=\"height: 50px;\">
                 <div class=\"container\">
                     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -293,6 +293,6 @@ class __TwigTemplate_3cef8b7cc1016d2ae9c30bff53b6e7ed extends Template
     {% block javascripts %}{% endblock %}
 </body>
 </html>
-", "base.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/centrale/centrale/templates/base.html.twig");
+", "base.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/Central-d-appel/templates/base.html.twig");
     }
 }

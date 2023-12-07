@@ -154,27 +154,27 @@ class __TwigTemplate_ccdd32c5c29916b33eb1d26a04af27a5 extends Template
         // line 49
         echo "
                             </div>
-
+                            
                             <input type=\"hidden\" name=\"_csrf_token\" value=\"";
         // line 52
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
-
+                            
                             <div class=\"d-flex justify-content-center\">
                                 <button class=\"btn btn-primary\" type=\"submit\">S'inscrire</button>
                             </div>
-
                             ";
+        // line 57
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 57, $this->source); })()), 'form_end');
+        echo "  
+                            <p class=\"mt-3 text-center\"><a href=\"";
         // line 58
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 58, $this->source); })()), 'form_end');
-        echo "
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\" class=\"btn btn-primary\">Retour</a></p>
+
                         </form>
                     </div>
                 </div>
-                <p class=\"mt-3 text-center\"><a href=\"";
-        // line 62
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-        echo "\" class=\"btn btn-primary\">Retour</a></p>
             </div>
         </div>
     </div>
@@ -200,7 +200,7 @@ class __TwigTemplate_ccdd32c5c29916b33eb1d26a04af27a5 extends Template
 
     public function getDebugInfo()
     {
-        return array (  176 => 62,  169 => 58,  160 => 52,  155 => 49,  153 => 44,  147 => 40,  145 => 34,  139 => 30,  137 => 24,  131 => 21,  126 => 19,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  172 => 58,  168 => 57,  160 => 52,  155 => 49,  153 => 44,  147 => 40,  145 => 34,  139 => 30,  137 => 24,  131 => 21,  126 => 19,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -255,22 +255,22 @@ class __TwigTemplate_ccdd32c5c29916b33eb1d26a04af27a5 extends Template
                                     }
                                 }) }}
                             </div>
-
+                            
                             <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
-
+                            
                             <div class=\"d-flex justify-content-center\">
                                 <button class=\"btn btn-primary\" type=\"submit\">S'inscrire</button>
                             </div>
+                            {{ form_end(registrationForm) }}  
+                            <p class=\"mt-3 text-center\"><a href=\"{{ path('app_login') }}\" class=\"btn btn-primary\">Retour</a></p>
 
-                            {{ form_end(registrationForm) }}
                         </form>
                     </div>
                 </div>
-                <p class=\"mt-3 text-center\"><a href=\"{{ path('app_login') }}\" class=\"btn btn-primary\">Retour</a></p>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}", "registration/register.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/centrale/centrale/templates/registration/register.html.twig");
+{% endblock %}", "registration/register.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/Central-d-appel/templates/registration/register.html.twig");
     }
 }

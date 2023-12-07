@@ -7,7 +7,7 @@ namespace Proxies\__CG__\App\Entity;
  */
 class Utilisateur extends \App\Entity\Utilisateur implements \Doctrine\ORM\Proxy\InternalProxy
 {
-     use \Symfony\Component\VarExporter\LazyGhostTrait {
+    use \Symfony\Component\VarExporter\LazyGhostTrait {
         initializeLazyObject as __load;
         setLazyObjectAsInitialized as public __setInitialized;
         isLazyObjectInitialized as private;
@@ -18,21 +18,17 @@ class Utilisateur extends \App\Entity\Utilisateur implements \Doctrine\ORM\Proxy
     private const LAZY_OBJECT_PROPERTY_SCOPES = [
         "\0".parent::class."\0".'Services' => [parent::class, 'Services', null],
         "\0".parent::class."\0".'centrales' => [parent::class, 'centrales', null],
-        "\0".parent::class."\0".'destinataire' => [parent::class, 'destinataire', null],
-        "\0".parent::class."\0".'fonction' => [parent::class, 'fonction', null],
         "\0".parent::class."\0".'id' => [parent::class, 'id', null],
         "\0".parent::class."\0".'password' => [parent::class, 'password', null],
         "\0".parent::class."\0".'roles' => [parent::class, 'roles', null],
         "\0".parent::class."\0".'username' => [parent::class, 'username', null],
         'Services' => [parent::class, 'Services', null],
         'centrales' => [parent::class, 'centrales', null],
-        'destinataire' => [parent::class, 'destinataire', null],
-        'fonction' => [parent::class, 'fonction', null],
         'id' => [parent::class, 'id', null],
         'password' => [parent::class, 'password', null],
         'roles' => [parent::class, 'roles', null],
         'username' => [parent::class, 'username', null],
-    ];
+    ];
 
     public function __construct(?\Closure $initializer = null, ?\Closure $cloner = null)
     {

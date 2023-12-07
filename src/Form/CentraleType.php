@@ -11,20 +11,23 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
-
 class CentraleType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('date_heure', DateTimeType::class, [
-                'label' => 'Date et Heure',
-                'widget' => 'single_text',
-                'attr' => ['class' => 'datepicker'], // Ajoutez une classe pour intégrer un datepicker si nécessaire
-                'attr' => ['class' => 'form-control'],
-                'attr' => ['class' => 'form-control datetimepicker mb-3'],                 
+        ->add('date_heure', DateTimeType::class, [
+            'label' => 'Date et Heure',
+            'widget' => 'single_text',
+            'attr' => ['class' => 'datepicker'], // Ajoutez une classe pour intégrer un datepicker si nécessaire
+            'attr' => ['class' => 'form-control'],
+            'attr' => ['class' => 'form-control datetimepicker mb-3'], // Ajoutez une classe de marge (mb-3)
             ])
-            ->add('agent')
+            ->add('agent', TextType::class, [
+                'label' => 'Agent',
+                'attr' => ['class' => 'form-control'],
+                'attr' => ['class' => 'form-control datetimepicker mb-3'], // Ajoutez une classe de marge (mb-3)
+            ])
             ->add('administre_appellant', TextType::class, [
                 'attr' => ['class' => 'form-control'],
                 'attr' => ['class' => 'form-control datetimepicker mb-3'], // Ajoutez une classe de marge (mb-3)
@@ -36,8 +39,6 @@ class CentraleType extends AbstractType
             ->add('objet', TextType::class, [
                 'attr' => ['class' => 'form-control'],
             ])
-            ->add('commune')
-<<<<<<< HEAD
             ->add('telephone', TextType::class, [
                 'attr' => ['class' => 'form-control'],
                 'attr' => ['class' => 'form-control datetimepicker mb-3'], // Ajoutez une classe de marge (mb-3)
@@ -57,12 +58,6 @@ class CentraleType extends AbstractType
                 'expanded' => true,
                 'multiple' => false,
             ]);
-=======
-            ->add('telephone')
-            ->add('mail')
-            ->add('destinataire')
-            ->add('status')
->>>>>>> 7b3ce8316677c0b100ee1d65159ffc833ad907b5
         ;
     }
 

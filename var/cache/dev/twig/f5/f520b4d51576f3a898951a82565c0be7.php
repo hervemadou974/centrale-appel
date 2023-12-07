@@ -239,6 +239,6 @@ class __TwigTemplate_ae77affcbdc289d4fe3d48d273493c31 extends Template
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/centrale/centrale/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/home/kovalen/delivery/Redoublement/Stage/Projet/CIREST/artisan/tests/CDC/Central-d-appel/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

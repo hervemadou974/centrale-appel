@@ -67,7 +67,7 @@ class CentraleController extends AbstractController
             'form' => $form,
         ]);
     }
-    
+
     #[Route('/{id}', name: 'app_centrale_delete', methods: ['POST'])]
     public function delete(Request $request, Centrale $centrale, EntityManagerInterface $entityManager): Response
     {

@@ -12,19 +12,15 @@
                 <td>{{ centrale.id }}</td>
             </tr>
             <tr>
-                <th>Date heure</th>
+                <th>Date_heure</th>
                 <td>{{ centrale.dateHeure ? centrale.dateHeure|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-            <th>Opérateur</th>
-            <td>{{ centrale.agent }}</td>
-            </tr>
-            <tr>
-                <th>Administre appellant</th>
+                <th>Administre_appellant</th>
                 <td>{{ centrale.administreAppellant }}</td>
             </tr>
             <tr>
-                <th>Prenom administre</th>
+                <th>Prenom_administre</th>
                 <td>{{ centrale.prenomAdministre }}</td>
             </tr>
             <tr>
@@ -41,12 +37,12 @@
             </tr>
             <tr>
                 <th>Status</th>
-                <td>{{ centrale.status ? 'Traité' : 'En cours de traitement' }}</td>
+                <td>{{ centrale.status ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
     </table>
 <center>
-    <a href="{{ path('app_centrale_index') }}"class="btn btn-primary d-flex justify-content-center align-items-center" style="width: 300px;">Retour en liste</a>
+    <a href="{{ path('app_centrale_index') }}"class="btn btn-primary d-flex justify-content-center align-items-center" style="width: 300px;">Retour à la liste</a>
 <center/>
     <a href="{{ path('app_centrale_edit', {'id': centrale.id}) }}"class="btn btn-primary d-flex justify-content-center align-items-center" style="width: 300px;">Modifier</a>
 

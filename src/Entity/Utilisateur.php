@@ -1,5 +1,4 @@
 <?php
-// Utilisateur.php
 
 namespace App\Entity;
 
@@ -36,16 +35,9 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'agent', targetEntity: Centrale::class)]
     private Collection $centrales;
 
-    #[ORM\Column(nullable: true)] // Permet à 'fonction' d'être nullable
-    private ?bool $fonction = false;
-
-    #[ORM\OneToMany(mappedBy: 'destinataire', targetEntity: Centrale::class)]
-    private Collection $destinataire; // Par défaut à false si non spécifié
-
     public function __construct()
     {
         $this->centrales = new ArrayCollection();
-        $this->destinataire = new ArrayCollection();
     }
 
     public function __ToString()
@@ -159,48 +151,6 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($centrale->getAgent() === $this) {
                 $centrale->setAgent(null);
-            }
-        }
-
-        return $this;
-    }
-
-    public function isFonction(): ?bool
-    {
-        return $this->fonction;
-    }
-
-    public function setFonction(bool $fonction): static
-    {
-        $this->fonction = $fonction;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Centrale>
-     */
-    public function getDestinataire(): Collection
-    {
-        return $this->destinataire;
-    }
-
-    public function addDestinataire(Centrale $destinataire): static
-    {
-        if (!$this->destinataire->contains($destinataire)) {
-            $this->destinataire->add($destinataire);
-            $destinataire->setDestinataire($this);
-        }
-
-        return $this;
-    }
-
-    public function removeDestinataire(Centrale $destinataire): static
-    {
-        if ($this->destinataire->removeElement($destinataire)) {
-            // set the owning side to null (unless already changed)
-            if ($destinataire->getDestinataire() === $this) {
-                $destinataire->setDestinataire(null);
             }
         }
 
